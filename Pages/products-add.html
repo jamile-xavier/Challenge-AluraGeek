@@ -9,12 +9,13 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <title>AluraGeek</title>
     <link
       rel="shortcut icon"
       href="../Assets/favicon.png"
       type="image/x-icon"
     />
+    <title>AluraGeek</title>
+    <link rel="stylesheet" href="../Css/products-add.css" />
   </head>
   <body>
     <header>
@@ -24,40 +25,37 @@
         name="search"
         id="search"
         placeholder="O que deseja encontrar?"
-        class="hide"
       />
-      <img src="../Assets/lupa.png" alt="Lupa de pesquisa" />
-      <button>Menu administrador</button>
+      <button>Menu Administrador</button>
     </header>
     <main>
       <section class="new__product">
         <form>
           <h1>Adicionar novo produto</h1>
-          <label for="url"></label>
-          <input
-            type="url"
-            id="url"
-            pattern="https://.*"
-            placeholder="URL da imagem"
-          />
-          <label for="category"></label>
-          <input type="text" id="category" placeholder="Categoria" />
-          <label for="product"></label>
-          <input type="text" id="product" placeholder="Nome do produto" />
-          <label for="price"></label>
-          <input type="text" id="price" placeholder="Preço do produto" />
-          <label for="text"></label>
-          <textarea
-            id="text"
-            cols="30"
-            rows="10"
-            placeholder="Descrição do produto"
-          ></textarea>
-          <label for="btn-add"></label>
-          <input type="submit" id="btn-add" value="Adicionar produto" />
+          <div class="box__input">
+            <label for="url">URL da Imagem</label>
+            <input type="url" id="url" pattern="https://.*" />
+          </div>
+          <div class="box__input">
+            <label for="category">Categoria</label>
+            <input type="text" id="category" placeholder="Consoles" />
+          </div>
+          <div class="box__input">
+            <label for="product">Nome do produto</label>
+            <input type="text" id="product" placeholder="Produto XYZ" />
+          </div>
+          <div class="box__input">
+            <label for="price">Preço do produto</label>
+            <input type="text" id="price" placeholder="R$60,00" />
+          </div>
+          <div class="box__input">
+            <label for="text">Descrição do produto</label>
+            <textarea id="text" cols="30" rows="10"></textarea>
+          </div>
+          <button>Adicionar produto</button>
         </form>
       </section>
-      <section class="about">
+      <section class="contacts">
         <img src="../Assets/Logo.svg" alt="Logomarca AluraGeek" />
         <nav>
           <ul>
@@ -68,19 +66,20 @@
             <li><a href="#">Quero ser franqueado</a></li>
             <li><a href="#">Anuncie aqui</a></li>
           </ul>
-          <form>
-            <label for="name"></label>
-            <input type="text" id="name" placeholder="Nome" />
-            <label for="text"></label>
-            <textarea
-              id="text"
-              cols="30"
-              rows="10"
-              placeholder="Escreva sua mensagem"
-            ></textarea>
-            <button type="submit">Enviar mensagem</button>
-          </form>
         </nav>
+
+        <form>
+          <h3>Fale conosco</h3>
+          <div class="box__input">
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="André Lisboa" />
+          </div>
+          <div class="box__input">
+            <label for="text">Escreva sua mensagem</label>
+            <textarea name="text" id="text" cols="30" rows="10"></textarea>
+          </div>
+          <button type="submit">Enviar mensagem</button>
+        </form>
       </section>
     </main>
     <footer>

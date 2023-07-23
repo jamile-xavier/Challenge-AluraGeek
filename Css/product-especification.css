@@ -9,7 +9,10 @@
   --color-blue: #2a7ae4;
   --color-black: #464646;
   --color-white: #fff;
+  --color-gray: #a2a2a2;
   --bg-blue: #eaf2fd;
+  --bg-gray: #f5f5f5;
+  --line-input: #c8c8c8;
 }
 
 body {
@@ -27,7 +30,13 @@ header {
 }
 
 header > input {
-  display: none;
+  background-image: url("../Assets/lupa.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 0.8rem 1.6rem;
+  border-radius: 2rem;
+  border: none;
+  width: 2.4rem;
 }
 
 header > button {
@@ -36,6 +45,64 @@ header > button {
   color: var(--color-blue);
   border: 0.1rem solid var(--color-blue);
   background-color: transparent;
+}
+
+main > .product,
+main > .similar__products {
+  background-color: var(--bg-gray);
+}
+
+main > .product img {
+  width: 100%;
+  height: 19.2;
+}
+
+main > .product > .text {
+  margin: 1.6rem 1.6rem 0;
+}
+
+main > .product > .text h1 {
+  font-size: 2.2rem;
+}
+
+main > .product > .text p {
+  font-size: 1.6rem;
+  padding: 0.8rem 0;
+}
+
+main > .product > .text p:last-child {
+  font-size: 1.4rem;
+}
+
+main > .similar__products {
+  padding-left: 1.6rem;
+}
+
+main > .similar__products h2 {
+  padding: 1.6rem 0;
+  font-size: 2.2rem;
+}
+
+main > .similar__products p {
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+}
+
+main > .similar__products > .products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+
+main > .similar__products a {
+  text-decoration: none;
+  color: var(--color-blue);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  margin: 0.8rem 0;
 }
 
 main > .contacts {
@@ -68,22 +135,43 @@ main > .contacts > nav > ul > li > a {
 
 main > .contacts > form {
   margin: 1.6rem;
+  width: 100%;
 }
 
 main > .contacts > form > h3 {
-  margin-top: 3.2rem;
+  margin: 3.2rem 1.6rem 1.6rem;
 }
 
-main > .contacts > form > input {
-  width: 100%;
+main > .contacts > form > .box__input {
   height: 5.6rem;
-  margin: 0.8rem 0 1.6rem;
+  background-color: var(--color-white);
+  margin: 0.8rem 1.6rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.4rem;
+  border-bottom: 0.1rem solid var(--line-input);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-main > .contacts > form > textarea {
+main > .contacts > form > .box__input > label {
+  width: 100%;
+  height: 1.6rem;
+  font-size: 1.2rem;
+  color: var(--color-gray);
+}
+
+main > .contacts > form > .box__input > input {
+  width: 100%;
+  height: 2rem;
+  border: none;
+}
+
+main > .contacts > form > .box__input > textarea {
   width: 100%;
   height: 100%;
   resize: none;
+  border: none;
 }
 
 main > .contacts > form > button {
@@ -92,6 +180,7 @@ main > .contacts > form > button {
   padding: 1.2rem 1.6rem;
   color: var(--color-white);
   background-color: var(--color-blue);
+  border: none;
   margin-top: 0.8rem;
 }
 
@@ -99,4 +188,82 @@ footer {
   text-align: center;
   padding: 3.2rem;
   font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  header {
+    display: flex;
+  }
+
+  header input {
+    width: 27.2rem;
+    background-color: var(--bg-gray);
+  }
+
+  main > .product {
+    display: flex;
+  }
+
+  main > .product img {
+    width: 25.4rem;
+    padding: 1.6rem 1.6rem 0;
+  }
+
+  main > .contacts {
+    display: grid;
+    grid-template-areas:
+      "A C"
+      "B C";
+    gap: 1.6rem;
+  }
+  main > .contacts > img {
+    grid-area: A;
+  }
+
+  main > .contacts > nav {
+    grid-area: B;
+  }
+
+  main > .contacts > form {
+    grid-area: C;
+  }
+}
+
+@media (min-width: 1024px) {
+  main > .product img {
+    width: 56rem;
+    height: 40rem;
+    margin-bottom: 6.4rem;
+  }
+
+  main > .product > .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main > .product > .text h1 {
+    font-size: 5.2rem;
+  }
+
+  main > .contacts {
+    padding: 0 6.4rem;
+  }
+
+  main > .contacts {
+    display: grid;
+    grid-template-areas: "A B C";
+    gap: 1.6rem;
+  }
+  main > .contacts > img {
+    grid-area: A;
+  }
+
+  main > .contacts > nav {
+    grid-area: B;
+  }
+
+  main > .contacts > form {
+    grid-area: C;
+  }
 }
