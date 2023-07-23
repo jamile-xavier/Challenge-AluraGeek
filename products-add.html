@@ -11,40 +11,52 @@
     />
     <link
       rel="shortcut icon"
-      href="../Assets/favicon.png"
+      href="./Assets/Images/favicon.png"
       type="image/x-icon"
     />
     <title>AluraGeek</title>
-    <link rel="stylesheet" href="../Css/login.css" />
+    <link rel="stylesheet" href="./Assets/Css/products-add.css" />
   </head>
   <body>
     <header>
-      <img src="../Assets/Logo.svg" alt="Logomarca AluraGeek" />
+      <img src="./Assets/Images/Logo.svg" alt="Logomarca AluraGeek" />
       <input
         type="search"
         name="search"
         id="search"
         placeholder="O que deseja encontrar?"
       />
+      <button>Menu Administrador</button>
     </header>
     <main>
-      <section class="data">
+      <section class="new__product">
         <form>
-          <h1>Iniciar Sessão</h1>
-          <label for="email"></label>
-          <input type="email" id="email" placeholder="Escreva seu email" />
-          <label for="password"></label>
-          <input
-            type="password"
-            id="password"
-            placeholder="Escreva sua senha"
-          />
-          <label for="btn"></label>
-          <input type="submit" id="btn" value="Entrar" />
+          <h1>Adicionar novo produto</h1>
+          <div class="box__input">
+            <label for="url">URL da Imagem</label>
+            <input type="url" id="url" pattern="https://.*" />
+          </div>
+          <div class="box__input">
+            <label for="category">Categoria</label>
+            <input type="text" id="category" placeholder="Consoles" />
+          </div>
+          <div class="box__input">
+            <label for="product">Nome do produto</label>
+            <input type="text" id="product" placeholder="Produto XYZ" />
+          </div>
+          <div class="box__input">
+            <label for="price">Preço do produto</label>
+            <input type="text" id="price" placeholder="R$60,00" />
+          </div>
+          <div class="box__input">
+            <label for="text">Descrição do produto</label>
+            <textarea id="text" cols="30" rows="10"></textarea>
+          </div>
+          <button>Adicionar produto</button>
         </form>
       </section>
       <section class="contacts">
-        <img src="../Assets/Logo.svg" alt="Logomarca AluraGeek" />
+        <img src="./Assets/Images/Logo.svg" alt="Logomarca AluraGeek" />
         <nav>
           <ul>
             <li><a href="#">Quem somos nós</a></li>

@@ -30,7 +30,7 @@ header {
 }
 
 header > input {
-  background-image: url("../Assets/lupa.png");
+  background-image: url("../Images/lupa.png");
   background-repeat: no-repeat;
   background-position: right;
   padding: 0.8rem 1.6rem;
@@ -40,74 +40,45 @@ header > input {
 }
 
 header > button {
-  width: 16.6rem;
+  width: 13.3rem;
   padding: 1.2rem 1.6rem;
   color: var(--color-blue);
   border: 0.1rem solid var(--color-blue);
   background-color: transparent;
 }
 
-main > .new__product {
+main > .data {
   background-color: var(--bg-gray);
+  margin: 0 auto;
 }
 
-main > .new__product > form {
+main > .data > form {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
-  margin: 1.6rem 1.6rem 0;
+  align-items: center;
 }
 
-main > .new__product > form h1 {
-  font-size: 2.2rem;
-  margin-top: 3.2rem;
+main > .data > form > h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  padding-top: 8rem;
 }
 
-main > .new__product > form > .box__input {
-  background-color: var(--color-white);
-  width: 100%;
-  height: 5.6rem;
-  display: flex;
-  flex-direction: column;
+main > .data > form > input {
+  border: none;
   border-radius: 0.4rem;
-}
-
-main > .new__product > form > .box__input > label {
-  width: 100%;
-  height: 1.6rem;
-  margin: 0.8rem 0 1.6rem;
-  background-color: var(--color-white);
-  color: var(--color-gray);
-  font-size: 1.2rem;
-  border: none;
-}
-
-main > .new__product > form > .box__input > input {
-  width: 100%;
-  height: 2rem;
-  margin: 0.8rem 0 1.6rem;
-  background-color: var(--color-white);
-  border: none;
-  border-bottom: 0.1rem solid var(--line-input);
-}
-
-main > .new__product > form textarea {
-  width: 100%;
-  height: 100%;
-  resize: none;
-  border: none;
-  background-color: var(--color-white);
-  border-radius: 0.4rem;
-  border-bottom: 0.1rem solid var(--line-input);
-}
-
-main > .new__product > form > button {
-  width: 100%;
-  height: 5.1rem;
+  margin: 1.6rem 0;
   padding: 1.6rem;
+  width: 27.5rem;
+  height: 4.1rem;
+}
+
+main > .data > form > input:last-child {
+  width: 10.9rem;
+  padding: 1.2rem 1.6rem;
   color: var(--color-white);
   background-color: var(--color-blue);
-  border: none;
+  margin-bottom: 8rem;
 }
 
 main > .contacts {
@@ -186,7 +157,7 @@ main > .contacts > form > button {
   color: var(--color-white);
   background-color: var(--color-blue);
   border: none;
-  margin-top: 2rem;
+  margin-top: 0.8rem;
 }
 
 footer {
@@ -226,18 +197,14 @@ footer {
 }
 
 @media (min-width: 1024px) {
-  main > .new__product > form > .box__input,
-  main > .new__product > form > button {
-    max-width: 55.9rem;
-    margin: 0 auto;
+  main > .data > form > input {
+    width: 42.3rem;
+    height: 6.3rem;
   }
 
-  main > .new__product > form > h1 {
-    margin: 0 auto;
-  }
-
-  main > .new__product > form > button {
-    margin-bottom: 6.4rem;
+  main > .data > form > input:last-child {
+    width: 42.3rem;
+    font-size: 1.8rem;
   }
 
   main > .contacts {
